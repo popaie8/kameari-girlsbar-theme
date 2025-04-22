@@ -96,35 +96,77 @@
     <h2 class="section-title gold">System<span class="sub">料金案内</span></h2>
     <div class="system-content">
       <table class="new-price-table">
+        <caption>料金表</caption>
         <tr>
-          <th>お1人様50分</th>
-          <th>基本料金</th>
+          <th>コース</th>
+          <th>料金</th>
         </tr>
         <tr>
-          <td>20:00～05:00</td>
+          <td>1SET50分飲み放題</td>
           <td>¥3,000</td>
         </tr>
         <tr>
-          <td>19:30～LAST</td>
-          <td>¥10,000</td>
+          <td>延長30分</td>
+          <td>¥3,000</td>
         </tr>
         <tr>
-          <td>延長料金(30分毎)</td>
+          <td>延長60分</td>
           <td>¥4,000</td>
         </tr>
         <tr>
-          <td>指名料</td>
-          <td>¥3,000</td>
-        </tr>
-        <tr>
-          <td>サービス料</td>
-          <td>30%</td>
+          <td>TAX</td>
+          <td>20%</td>
         </tr>
       </table>
+      
+      <div class="shop-info-wrap">
+        <h3 class="shop-info-title">店舗情報</h3>
+        <table class="shop-info-table">
+          <caption>店内情報</caption>
+          <tr>
+            <th>在籍女の子数</th>
+            <td>16名</td>
+          </tr>
+          <tr>
+            <th>在籍スタッフ</th>
+            <td>20代前半</td>
+          </tr>
+          <tr>
+            <th>席数</th>
+            <td>カウンター11席</td>
+          </tr>
+          <tr>
+            <th>キャスト衣装</th>
+            <td>私服</td>
+          </tr>
+          <tr>
+            <th>カラオケ</th>
+            <td>DAM</td>
+          </tr>
+          <tr>
+            <th>飲み放題ドリンク</th>
+            <td>ビール、焼酎、ウイスキー</td>
+          </tr>
+        </table>
+      </div>
+      
       <div class="payment-info">
-        <p>各種カードがご利用いただけます</p>
-        <p class="card-list">JCB / VISA / AMEX / DINERS / DC / UC / MASTER</p>
-        <p class="note">※別途消費税が加算されます。</p>
+        <h3>ご利用可能な決済方法</h3>
+        <div class="payment-methods">
+          <div class="payment-method-group">
+            <h4>クレジットカード</h4>
+            <p class="card-list">JCB / VISA / Mastercard / American Express / Diners Club</p>
+          </div>
+          <div class="payment-method-group">
+            <h4>電子決済</h4>
+            <p class="card-list">PayPay</p>
+          </div>
+          <div class="payment-method-group">
+            <h4>交通系・電子マネー</h4>
+            <p class="card-list">Suica / PASMO / Kitaca / manaca / TOICA / SUGOCA / nimoca / ICOCA</p>
+          </div>
+        </div>
+        <p class="note">※表示価格に別途消費税が加算されます。</p>
       </div>
     </div>
   </div>
