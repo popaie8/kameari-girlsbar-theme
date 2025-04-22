@@ -28,12 +28,13 @@ function ajito_enqueue_scripts() {
   wp_enqueue_style('slick-theme', 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css', array(), '1.8.1');
   wp_enqueue_script('slick-script', 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js', array('jquery'), '1.8.1', true);
   
-  // カスタムスクリプト
+  // カスタムスクリプト（非同期読み込み）
   wp_enqueue_script('ajito-script', get_template_directory_uri() . '/js/script.js', array('jquery', 'slick-script'), filemtime(get_template_directory() . '/js/script.js'), true);
+  wp_script_add_data('ajito-script', 'async', true);
 }
 add_action('wp_enqueue_scripts', 'ajito_enqueue_scripts');
 
-// Include modular components
+// モジュール読み込み
 require_once get_template_directory() . '/inc/custom-post-types.php';
 require_once get_template_directory() . '/inc/custom-fields.php';
 require_once get_template_directory() . '/inc/seo.php';
@@ -104,3 +105,30 @@ function ajito_fix_post_type_permalinks() {
   $wp_rewrite->flush_rules();
 }
 add_action('init', 'ajito_fix_post_type_permalinks', 99);
+
+// 画像の遅延読み込み追加
+function ajito_add_lazy_loading($content) {
+  $content = preg_replace('/<img(.*?)>/i', '<img$1 loading="lazy">', $content);
+  return $content;
+}
+add_filter('the_content', 'ajito_add_lazy_loading');
+
+// テーブルにキャプションを追加
+function ajito_add_table_caption($content) {
+  $content = preg_replace('/<table class="new-price-table">/i', '<table class="new-price-table"><caption>料金表</caption>', $content);
+  $content = preg_replace('/<table class="access-table">/i', '<table class="access-table"><caption>店舗情報</caption>', $content);
+  return $content;
+}
+add_filter('the_content', 'ajito_add_table_caption');
+
+// エラーに404ページをカスタム
+function ajito_custom_404_page() {
+  if (is_404()) {
+    global $wp_query;
+    $wp_query->set_404();
+    status_header(404);
+    get_template_part('404');
+    exit();
+  }
+}
+add_action('template_redirect', 'ajito_custom_404_page');
