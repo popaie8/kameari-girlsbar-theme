@@ -1716,3 +1716,44 @@ footer .inner {
     padding: 15px;
   }
 }
+/* 決済方法アイコン用のスタイル追加 */
+.payment-icons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin: 10px 0 15px;
+}
+
+.payment-icons img {
+  height: 30px;
+  width: auto;
+  object-fit: contain;
+  filter: brightness(0.9);
+  transition: all 0.3s ease;
+}
+
+.payment-icons img:hover {
+  filter: brightness(1.1);
+  transform: translateY(-2px);
+}
+
+/* 交通系ICカード用 */
+.payment-method-group:nth-child(3) .payment-icons img {
+  height: 28px;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+  .payment-icons {
+    gap: 10px;
+  }
+  
+  .payment-icons img {
+    height: 25px;
+  }
+  
+  .payment-method-group:nth-child(3) .payment-icons img {
+    height: 23px;
+  }
+}
