@@ -1622,3 +1622,97 @@ footer .inner {
     font-size: 12px;
   }
 }
+/* Additional System Section Styles */
+.shop-info-wrap {
+  margin: 50px auto 30px;
+  max-width: 700px;
+}
+
+.shop-info-title {
+  font-size: 24px;
+  color: #ada58b;
+  margin-bottom: 20px;
+  font-weight: normal;
+  font-family: 'Playfair Display', 'Noto Serif JP', serif;
+}
+
+.shop-info-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: rgba(0, 0, 0, 0.5);
+  margin-bottom: 30px;
+}
+
+.shop-info-table th, 
+.shop-info-table td {
+  padding: 15px 20px;
+  border: 1px solid #ada58b;
+  text-align: left;
+}
+
+.shop-info-table th {
+  width: 30%;
+  background-color: rgba(173, 165, 139, 0.3);
+  color: #ada58b;
+  font-weight: normal;
+}
+
+.payment-info h3 {
+  font-size: 24px;
+  color: #ada58b;
+  margin-bottom: 20px;
+  font-weight: normal;
+  font-family: 'Playfair Display', 'Noto Serif JP', serif;
+}
+
+.payment-methods {
+  margin: 20px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.payment-method-group {
+  background: rgba(20, 20, 20, 0.5);
+  border: 1px solid #333;
+  padding: 20px;
+  border-radius: 2px;
+  min-width: 200px;
+}
+
+.payment-method-group h4 {
+  color: #ada58b;
+  margin-bottom: 15px;
+  text-align: center;
+  font-weight: normal;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .payment-methods {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .payment-method-group {
+    width: 100%;
+  }
+  
+  .shop-info-table th, 
+  .shop-info-table td {
+    padding: 12px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .shop-info-title, 
+  .payment-info h3 {
+    font-size: 20px;
+  }
+  
+  .payment-method-group {
+    padding: 15px;
+  }
+}
