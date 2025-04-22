@@ -202,12 +202,32 @@
   <div class="inner center">
     <h2 class="section-title gold">Access<span class="sub">アクセス</span></h2>
     <table class="access-table">
+      <caption>店舗情報</caption>
       <tr><th>住所</th><td>〒125-0061 東京都葛飾区亀有5丁目28-2 1F</td></tr>
       <tr><th>電話番号</th><td><a href="tel:03-5849-3269">03-5849-3269</a></td></tr>
       <tr><th>営業時間</th><td>月〜土 20:00〜LAST</td></tr>
     </table>
+    
+    <!-- Google評価の表示 -->
+    <div class="google-rating">
+      <div class="stars">
+        <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star half">★</span>
+      </div>
+      <p>Google レビュー 4.5/5.0 (30件の評価)</p>
+      <div class="rating-actions">
+        <a href="https://g.co/kgs/w9qLB4X" target="_blank" rel="noopener" class="review-btn">
+          <img src="<?php echo get_template_directory_uri(); ?>/images/google-review-icon.png" alt="Google レビュー" width="20" loading="lazy">
+          レビューを見る
+        </a>
+        <a href="https://www.google.com/maps/dir/?api=1&destination=ガールズバーAJITO+亀有" class="directions-btn" target="_blank" rel="noopener">
+          <img src="<?php echo get_template_directory_uri(); ?>/images/directions-icon.png" alt="経路案内" width="16" loading="lazy">
+          ここへの経路
+        </a>
+      </div>
+    </div>
+    
     <div class="map-wrapper">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3238.669790589303!2d139.85292567677388!3d35.746123792694!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018617afc7a3f51%3A0xd8e4a15119a39a9e!2z44CSMTQzLTAwMiDkuJzkvJfpg73luoPooajlupc!5e0!3m2!1sja!2sjp!4v1682505619603!5m2!1sja!2sjp" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3237.2986257033417!2d139.84441227723516!3d35.76804017255934!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188f66b72b7859%3A0x60ca23a89e3b96e3!2sAJITO!5e0!3m2!1sja!2sjp!4v1745350124913!5m2!1sja!2sjp" width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
   </div>
 </section>
