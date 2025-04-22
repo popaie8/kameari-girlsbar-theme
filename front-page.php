@@ -36,6 +36,12 @@
 <section id="cast" class="castListWrap">
   <div class="inner center">
     <h2 class="section-title gold">Cast<span class="sub">キャスト一覧</span></h2>
+ <div class="cast-links">
+      <a href="<?php echo home_url('/cast'); ?>" class="more-btn">もっと見る</a>
+      <a href="<?php echo home_url('/schedule'); ?>" class="more-btn schedule-btn">出勤情報</a>
+    </div>
+  </div>
+</section>
     <ul class="castList">
       <?php
       $args = array(
@@ -91,12 +97,12 @@
     <div class="system-content">
       <table class="new-price-table">
         <tr>
-          <th>メンバーお1人様60分</th>
+          <th>お1人様50分</th>
           <th>基本料金</th>
         </tr>
         <tr>
-          <td>19:00～19:29</td>
-          <td>¥5,000</td>
+          <td>20:00～05:00</td>
+          <td>¥3,000</td>
         </tr>
         <tr>
           <td>19:30～LAST</td>
