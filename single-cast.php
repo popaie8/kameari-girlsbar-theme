@@ -8,9 +8,9 @@
       <div class="cast-profile">
         <div class="cast-image">
           <?php if (has_post_thumbnail()) : ?>
-            <?php the_post_thumbnail('full', array('alt' => get_the_title())); ?>
+            <?php the_post_thumbnail('full', array('alt' => get_the_title(), 'loading' => 'lazy')); ?>
           <?php else : ?>
-            <img src="<?php echo get_template_directory_uri(); ?>/images/cast-placeholder.jpg" alt="<?php the_title(); ?>">
+            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/cast-placeholder.jpg" alt="<?php echo esc_attr(get_the_title()); ?>" loading="lazy">
           <?php endif; ?>
         </div>
         
@@ -18,31 +18,31 @@
           <h2 class="cast-name"><?php the_title(); ?></h2>
           
           <div class="cast-meta">
-            <?php if (get_field('age')) : ?>
+            <?php if (get_post_meta($post->ID, 'age', true)) : ?>
             <dl>
               <dt>年齢：</dt>
-              <dd><?php the_field('age'); ?></dd>
+              <dd><?php echo esc_html(get_post_meta($post->ID, 'age', true)); ?></dd>
             </dl>
             <?php endif; ?>
             
-            <?php if (get_field('height')) : ?>
+            <?php if (get_post_meta($post->ID, 'height', true)) : ?>
             <dl>
               <dt>身長：</dt>
-              <dd><?php the_field('height'); ?></dd>
+              <dd><?php echo esc_html(get_post_meta($post->ID, 'height', true)); ?></dd>
             </dl>
             <?php endif; ?>
             
-            <?php if (get_field('hobby')) : ?>
+            <?php if (get_post_meta($post->ID, 'hobby', true)) : ?>
             <dl>
               <dt>趣味：</dt>
-              <dd><?php the_field('hobby'); ?></dd>
+              <dd><?php echo esc_html(get_post_meta($post->ID, 'hobby', true)); ?></dd>
             </dl>
             <?php endif; ?>
             
-            <?php if (get_field('favorite')) : ?>
+            <?php if (get_post_meta($post->ID, 'favorite', true)) : ?>
             <dl>
               <dt>好きなもの：</dt>
-              <dd><?php the_field('favorite'); ?></dd>
+              <dd><?php echo esc_html(get_post_meta($post->ID, 'favorite', true)); ?></dd>
             </dl>
             <?php endif; ?>
           </div>
@@ -62,7 +62,7 @@
       <p>キャスト情報が見つかりませんでした。</p>
     <?php endif; ?>
     
-    <a href="<?php echo home_url('/cast'); ?>" class="more-btn">一覧に戻る</a>
+    <a href="<?php echo esc_url(home_url('/cast')); ?>" class="more-btn">一覧に戻る</a>
   </div>
 </div>
 
