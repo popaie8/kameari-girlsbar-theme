@@ -151,26 +151,37 @@
       </div>
       
       <div class="payment-info">
-        <h3>ご利用可能な決済方法</h3>
-        <div class="payment-methods">
-          <div class="payment-method-group">
-            <h4>クレジットカード</h4>
-            <p class="card-list">JCB / VISA / Mastercard / American Express / Diners Club</p>
-          </div>
-          <div class="payment-method-group">
-            <h4>電子決済</h4>
-            <p class="card-list">PayPay</p>
-          </div>
-          <div class="payment-method-group">
-            <h4>交通系・電子マネー</h4>
-            <p class="card-list">Suica / PASMO / Kitaca / manaca / TOICA / SUGOCA / nimoca / ICOCA</p>
-          </div>
-        </div>
-        <p class="note">※表示価格に別途消費税が加算されます。</p>
+  <h3>ご利用可能な決済方法</h3>
+  <div class="payment-methods">
+    <div class="payment-method-group">
+      <h4>クレジットカード</h4>
+      <div class="payment-icons">
+        <img src="<?php echo get_template_directory_uri(); ?>/images/payment-jcb.png" alt="JCBカード" loading="lazy">
+        <img src="<?php echo get_template_directory_uri(); ?>/images/payment-visa.png" alt="VISAカード" loading="lazy">
+        <img src="<?php echo get_template_directory_uri(); ?>/images/payment-mastercard.png" alt="Mastercardカード" loading="lazy">
+        <img src="<?php echo get_template_directory_uri(); ?>/images/payment-amex.png" alt="American Expressカード" loading="lazy">
+        <img src="<?php echo get_template_directory_uri(); ?>/images/payment-diners.png" alt="Diners Clubカード" loading="lazy">
       </div>
+      <p class="card-list">JCB / VISA / Mastercard / American Express / Diners Club</p>
+    </div>
+    <div class="payment-method-group">
+      <h4>電子決済</h4>
+      <div class="payment-icons">
+        <img src="<?php echo get_template_directory_uri(); ?>/images/payment-paypay.png" alt="PayPay" loading="lazy">
+      </div>
+      <p class="card-list">PayPay</p>
+    </div>
+    <div class="payment-method-group">
+      <h4>交通系・電子マネー</h4>
+      <div class="payment-icons">
+        <img src="<?php echo get_template_directory_uri(); ?>/images/payment-suica.png" alt="Suica" loading="lazy">
+        <img src="<?php echo get_template_directory_uri(); ?>/images/payment-pasmo.png" alt="PASMO" loading="lazy">
+        <img src="<?php echo get_template_directory_uri(); ?>/images/payment-ic-card.png" alt="交通系ICカード" loading="lazy">
+      </div>
+      <p class="card-list">Suica / PASMO / Kitaca / manaca / TOICA / SUGOCA / nimoca / ICOCA</p>
     </div>
   </div>
-</section>
+</div>
 
 <section id="gallery" class="galleryWrap">
   <div class="inner center">
