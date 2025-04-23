@@ -1,0 +1,431 @@
+/**
+ * AJITO テーマ - レスポンシブスタイル
+ * 
+ * メディアクエリをまとめたファイル
+ */
+
+/* ===== 1200px以下 ===== */
+@media (max-width: 1200px) {
+  .section-title {
+    font-size: 32px;
+  }
+  
+  .gallery-slider .slick-prev {
+    left: -10px;
+  }
+  
+  .gallery-slider .slick-next {
+    right: -10px;
+  }
+  
+  .cast-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .inner {
+    width: 95%;
+  }
+}
+
+/* ===== 992px以下（タブレット） ===== */
+@media (max-width: 992px) {
+  :root {
+    --header-height: 70px;
+    --spacing-xl: 60px;
+  }
+  
+  .section-title {
+    font-size: 28px;
+  }
+  
+  section {
+    padding: var(--spacing-xl) 0;
+  }
+  
+  .flexWrap {
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .castList {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  }
+  
+  .cast-profile {
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .cast-image {
+    max-width: 100%;
+  }
+  
+  .payment-methods {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .payment-method-group {
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .recruit-details {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+  
+  .schedule-hero-title,
+  .recruit-hero-title {
+    font-size: 42px;
+  }
+  
+  .map-wrapper {
+    padding-bottom: 60%;
+  }
+}
+
+/* ===== 768px以下（タブレット～スマホ） ===== */
+@media (max-width: 768px) {
+  :root {
+    --spacing-xl: 50px;
+  }
+  
+  .menu-toggle {
+    display: block;
+  }
+  
+  .global-nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    max-width: 300px;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.95);
+    padding: 80px 20px 20px;
+    transition: var(--transition);
+    overflow-y: auto;
+    z-index: 1000;
+  }
+  
+  .global-nav.open {
+    right: 0;
+  }
+  
+  .global-nav ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .section-title {
+    font-size: 26px;
+  }
+  
+  .site-logo img {
+    height: 40px;
+  }
+  
+  .firstView .textWrap {
+    width: 90%;
+    padding: 25px 20px;
+  }
+  
+  .castList {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  }
+  
+  .news-navigation {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+  
+  .recruit-contact {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+  
+  .recruit-contact-item {
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  .flow-step {
+    flex-direction: column;
+  }
+  
+  .flow-step-number {
+    margin-bottom: 15px;
+  }
+  
+  .flow-step:not(:last-child)::after {
+    display: none;
+  }
+  
+  .faq-question p,
+  .faq-answer p {
+    font-size: 16px;
+  }
+  
+  .rating-actions {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .error-title {
+    font-size: 80px;
+  }
+  
+  .error-text {
+    font-size: 20px;
+  }
+  
+  .footer-nav ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  /* テーブルスタイル調整 */
+  .new-price-table th, 
+  .new-price-table td,
+  .shop-info-table th, 
+  .shop-info-table td,
+  .access-table th,
+  .access-table td {
+    padding: 15px 10px;
+  }
+  
+  /* ギャラリースライダー調整 */
+  .gallery-slider .slick-slide img {
+    height: 220px;
+  }
+}
+
+/* ===== 576px以下（スマホ） ===== */
+@media (max-width: 576px) {
+  :root {
+    --spacing-xl: 40px;
+  }
+  
+  .section-title {
+    font-size: 22px;
+  }
+  
+  .firstView .rubi {
+    font-size: 1.8rem;
+  }
+  
+  .firstView .en {
+    font-size: 1rem;
+  }
+  
+  .firstView .tit {
+    font-size: 1.3rem;
+  }
+  
+  .lead-text {
+    font-size: 14px;
+    line-height: 1.8;
+  }
+  
+  .castList {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 15px;
+  }
+  
+  .castList li p {
+    font-size: 16px;
+    padding: 10px 0;
+  }
+  
+  .new-price-table th, 
+  .new-price-table td {
+    padding: 12px 8px;
+    font-size: 14px;
+  }
+  
+  .shop-info-table th, 
+  .shop-info-table td {
+    padding: 12px 8px;
+    font-size: 14px;
+  }
+  
+  .payment-info h3,
+  .shop-info-title {
+    font-size: 20px;
+  }
+  
+  .access-table th,
+  .access-table td {
+    padding: 12px 8px;
+    font-size: 14px;
+  }
+  
+  .map-wrapper {
+    padding-bottom: 70%;
+  }
+  
+  .schedule-hero-title,
+  .recruit-hero-title {
+    font-size: 32px;
+  }
+  
+  .schedule-hero-subtitle,
+  .recruit-hero-subtitle {
+    font-size: 16px;
+  }
+  
+  .recruit-merit-title {
+    font-size: 22px;
+  }
+  
+  .error-title {
+    font-size: 60px;
+  }
+  
+  .error-btn {
+    padding: 12px 30px;
+  }
+  
+  .copyright {
+    font-size: 12px;
+  }
+  
+  /* ギャラリースライダー調整 */
+  .gallery-slider .slick-slide img {
+    height: 180px;
+  }
+  
+  /* フォントサイズ調整 */
+  .cast-name {
+    font-size: 26px;
+  }
+  
+  .news-header .news-title {
+    font-size: 24px;
+  }
+  
+  /* SNSアイコン調整 */
+  .sns li a {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+/* ===== 375px以下（小型スマホ） ===== */
+@media (max-width: 375px) {
+  .schedule-hero-title,
+  .recruit-hero-title {
+    font-size: 28px;
+  }
+  
+  .castList {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 10px;
+  }
+  
+  .castList li p {
+    font-size: 14px;
+    padding: 8px 0;
+  }
+  
+  .gallery-slider .slick-slide img {
+    height: 150px;
+  }
+  
+  .error-title {
+    font-size: 50px;
+  }
+  
+  .error-text {
+    font-size: 18px;
+  }
+  
+  .section-title {
+    font-size: 20px;
+  }
+  
+  .firstView .rubi {
+    font-size: 1.5rem;
+  }
+  
+  .firstView .tit {
+    font-size: 1.1rem;
+  }
+}
+
+/* ===== 印刷用スタイル ===== */
+@media print {
+  body {
+    background: #fff;
+    color: #000;
+    font-size: 12pt;
+  }
+  
+  .site-header,
+  .site-footer,
+  .menu-toggle {
+    display: none;
+  }
+  
+  .site-content {
+    padding-top: 0;
+  }
+  
+  a {
+    color: #000;
+    text-decoration: underline;
+  }
+  
+  .section-title {
+    color: #000;
+  }
+  
+  .section-title:after {
+    background: #000;
+  }
+  
+  .schedule-table th,
+  .schedule-table td,
+  .new-price-table th,
+  .new-price-table td,
+  .shop-info-table th,
+  .shop-info-table td {
+    border-color: #000;
+    color: #000;
+  }
+  
+  .status-on,
+  .status-off {
+    color: #000;
+    background: none;
+  }
+  
+  .firstView,
+  .galleryWrap,
+  .recruitWrap {
+    page-break-inside: avoid;
+  }
+  
+  .castList {
+    page-break-inside: avoid;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  img {
+    max-width: 100% !important;
+  }
+  
+  /* 各ページに店舗情報をフッターとして表示 */
+  @page {
+    margin: 1cm;
+    @bottom-center {
+      content: "ガールズバーAJITO - 東京都葛飾区亀有5丁目28-2 1F - TEL: 03-5849-3269";
+    }
+  }
+}
